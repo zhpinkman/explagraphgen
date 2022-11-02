@@ -1,0 +1,7 @@
+eval_loss = 0.7050610184669495
+eval_micro_f1 = 0.5
+eval_macro_f1 = 0.3333333333333333
+eval_weighted_f1 = 0.6666666666666666
+eval_acc = 0.5
+epoch = 10.0
+total_flos = 6462694872514560

@@ -1,0 +1,46 @@
+{
+    "input_ids": [
+        "Belief: marriage is pase. Argument: Not everyone believes in marriage anymore. Stance: counter",
+        "Belief: marriage is the best for a family unit. Argument: Marriage is a predictor of health and happiness. Stance: support",
+        "Belief: Entrapment shouldn't be legalized since it puts people into false situations. Argument: Entrapment is really a trick Stance: support",
+        "Belief: Marriage is the backbone of society. Argument: Marriage forms strong families. Stance: support",
+        "Belief: Entrapment causes police to abuse citizens and extort from them. Argument: Entrapment causes harm to citizens Stance: support",
+        "Belief: Marriage is outdated. Argument: Most people get married. Stance: counter",
+        "Belief: Marriage is a sacred institution, and shouldn't be abandoned. Argument: God supports marriage Stance: support",
+        "Belief: Entrapment is justified and should be legal. Argument: A crime is a crime whether it was set up or not. Stance: counter"
+    ],
+    "attention_mask": [
+        8,
+        38
+    ],
+    "labels": [
+        "(marriage; capable of; deceiving)(deceiving; created by; pase)(pase; used for; everyone)(everyone; capable of; believes)",
+        "(marriage; created by; love)(love; causes; health and happiness)(health and happiness; used for; family unit)",
+        "(entrapment; is a; trick)(trick; is a; false situations)(trick; not capable of; be legalized)",
+        "(marriage; used for; couples)(couples; capable of; strong families)(strong families; is a; backbone of society)",
+        "(entrapment; capable of; being abused)(being abused; created by; police)(police; capable of; harm)(harm; used for; people)(people; part of; citizens)",
+        "(most people; desires; traditional institutions)(traditional institutions; causes; stability)(stability; created by; people get married)(people get married; is not a; outdated)(outdated; is not a; benefit of interdependence)(benefit of interdependence; part of; marriage)",
+        "(marriage; part of; sacred institutions)(sacred institutions; part of; cultures)(cultures; made of; religions)(religions; used for; god)(god; not desires; abandoned)",
+        "(crime; is a; negative for society)(negative for society; receives action; law enforcement)(law enforcement; capable of; set up)(set up; capable of; criminals off street)(criminals off street; desires; justified)(justified; created by; changing legal system)(changing legal system; has context; entrapment)"
+    ],
+    "ids": [
+        "<pad>",
+        "</s>",
+        "<unk>",
+        "",
+        "X",
+        ".",
+        ",",
+        "s"
+    ],
+    "decoder_input_ids": [
+        "(marriage; capable of; deceiving)(deceiving; created by; pase)(pase; used for; everyone)(everyone; capable of; believes)",
+        "(marriage; created by; love)(love; causes; health and happiness)(health and happiness; used for; family unit)",
+        "(entrapment; is a; trick)(trick; is a; false situations)(trick; not capable of; be legalized)",
+        "(marriage; used for; couples)(couples; capable of; strong families)(strong families; is a; backbone of society)",
+        "(entrapment; capable of; being abused)(being abused; created by; police)(police; capable of; harm)(harm; used for; people)(people; part of; citizens)",
+        "(most people; desires; traditional institutions)(traditional institutions; causes; stability)(stability; created by; people get married)(people get married; is not a; outdated)(outdated; is not a; benefit of interdependence)(benefit of interdependence; part of; marriage)",
+        "(marriage; part of; sacred institutions)(sacred institutions; part of; cultures)(cultures; made of; religions)(religions; used for; god)(god; not desires; abandoned)",
+        "(crime; is a; negative for society)(negative for society; receives action; law enforcement)(law enforcement; capable of; set up)(set up; capable of; criminals off street)(criminals off street; desires; justified)(justified; created by; changing legal system)(changing legal system; has context; entrapment)"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "test": [
+        {
+            "test_avg_loss": 0.5411674976348877,
+            "test_avg_rouge1": 51.273016,
+            "test_avg_rouge2": 27.99821,
+            "test_avg_rougeL": 41.110735999999996,
+            "test_avg_rougeLsum": 41.133973999999995,
+            "test_avg_gen_time": 0.20782985468705495,
+            "test_avg_gen_len": 47.88,
+            "step_count": 1
+        }
+    ]
+}
