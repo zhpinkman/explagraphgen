@@ -132,8 +132,6 @@ dmypy.json
 .DS_store
 tmp/
 runs/
-**/*.out
-**/*.err
 cache/
 lightning_logs/
 **/best_tfmr/

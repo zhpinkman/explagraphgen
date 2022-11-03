@@ -1,0 +1,42 @@
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+CUDA_VISIBLE_DEVICES: [0]
+Set SLURM handle signals.
+Traceback (most recent call last):
+  File "src/train_graph_gen_max_margin.py", line 455, in <module>
+    main(args)
+  File "src/train_graph_gen_max_margin.py", line 444, in main
+    trainer.test(model)
+  File "/cluster/raid/home/zhivar.sourati/anaconda3/envs/explagraphgen/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1279, in test
+    results = self.__test_given_model(model, test_dataloaders)
+  File "/cluster/raid/home/zhivar.sourati/anaconda3/envs/explagraphgen/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1346, in __test_given_model
+    results = self.fit(model)
+  File "/cluster/raid/home/zhivar.sourati/anaconda3/envs/explagraphgen/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1003, in fit
+    results = self.single_gpu_train(model)
+  File "/cluster/raid/home/zhivar.sourati/anaconda3/envs/explagraphgen/lib/python3.8/site-packages/pytorch_lightning/trainer/distrib_parts.py", line 186, in single_gpu_train
+    results = self.run_pretrain_routine(model)
+  File "/cluster/raid/home/zhivar.sourati/anaconda3/envs/explagraphgen/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1166, in run_pretrain_routine
+    results = self.run_evaluation(test_mode=True)
+  File "/cluster/raid/home/zhivar.sourati/anaconda3/envs/explagraphgen/lib/python3.8/site-packages/pytorch_lightning/trainer/evaluation_loop.py", line 359, in run_evaluation
+    self.reset_test_dataloader(model)
+  File "/cluster/raid/home/zhivar.sourati/anaconda3/envs/explagraphgen/lib/python3.8/site-packages/pytorch_lightning/trainer/data_loading.py", line 353, in reset_test_dataloader
+    self._reset_eval_dataloader(model, 'test')
+  File "/cluster/raid/home/zhivar.sourati/anaconda3/envs/explagraphgen/lib/python3.8/site-packages/pytorch_lightning/trainer/data_loading.py", line 270, in _reset_eval_dataloader
+    dataloaders = self.request_dataloader(getattr(model, f'{mode}_dataloader'))
+  File "/cluster/raid/home/zhivar.sourati/anaconda3/envs/explagraphgen/lib/python3.8/site-packages/pytorch_lightning/trainer/data_loading.py", line 364, in request_dataloader
+    dataloader = dataloader_fx()
+  File "src/train_graph_gen_max_margin.py", line 307, in test_dataloader
+    return self.get_dataloader("test", batch_size=self.hparams.eval_batch_size)
+  File "src/train_graph_gen_max_margin.py", line 264, in get_dataloader
+    dataset = self.get_dataset(type_path)
+  File "src/train_graph_gen_max_margin.py", line 254, in get_dataset
+    dataset = self.dataset_class(
+  File "/cluster/raid/home/zhivar.sourati/ExplagraphGen/src/utils_max_margin.py", line 129, in __init__
+    self.src_lens = self.get_char_lens(self.src_file)
+  File "/cluster/raid/home/zhivar.sourati/ExplagraphGen/src/utils_max_margin.py", line 148, in get_char_lens
+    return [len(x) for x in Path(data_file).open().readlines()]
+  File "/cluster/raid/home/zhivar.sourati/anaconda3/envs/explagraphgen/lib/python3.8/pathlib.py", line 1218, in open
+    return io.open(self, mode, buffering, encoding, errors, newline,
+  File "/cluster/raid/home/zhivar.sourati/anaconda3/envs/explagraphgen/lib/python3.8/pathlib.py", line 1074, in _opener
+    return self._accessor.open(self, flags, mode)
+FileNotFoundError: [Errno 2] No such file or directory: 'contrastive_data/test.source'

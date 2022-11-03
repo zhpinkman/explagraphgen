@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "src/train_graph_gen_contrastive.py", line 472, in <module>
+    main(args)
+  File "src/train_graph_gen_contrastive.py", line 406, in main
+    check_output_dir(args, expected_items=3)
+  File "/cluster/raid/home/zhivar.sourati/ExplagraphGen/src/utils_contrastive.py", line 680, in check_output_dir
+    raise ValueError(
+ValueError: Output directory (models/contrastive) already exists and has 4 items in it (expected 3 items). Use --overwrite_output_dir to overcome.

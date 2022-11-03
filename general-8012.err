@@ -1,0 +1,6 @@
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+CUDA_VISIBLE_DEVICES: [0]
+Set SLURM handle signals.
+/cluster/raid/home/zhivar.sourati/anaconda3/envs/explagraphgen/lib/python3.8/site-packages/transformers/generation_utils.py:760: UserWarning: __floordiv__ is deprecated, and its behavior will change in a future version of pytorch. It currently rounds toward 0 (like the 'trunc' function NOT 'floor'). This results in incorrect rounding for negative values. To keep the current behavior, use torch.div(a, b, rounding_mode='trunc'), or for actual floor division, use torch.div(a, b, rounding_mode='floor').
+  beam_id = beam_token_id // vocab_size

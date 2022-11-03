@@ -1,0 +1,34 @@
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+CUDA_VISIBLE_DEVICES: [0]
+Set SLURM handle signals.
+/cluster/raid/home/zhivar.sourati/anaconda3/envs/explagraphgen/lib/python3.8/site-packages/transformers/generation_utils.py:760: UserWarning: __floordiv__ is deprecated, and its behavior will change in a future version of pytorch. It currently rounds toward 0 (like the 'trunc' function NOT 'floor'). This results in incorrect rounding for negative values. To keep the current behavior, use torch.div(a, b, rounding_mode='trunc'), or for actual floor division, use torch.div(a, b, rounding_mode='floor').
+  beam_id = beam_token_id // vocab_size
+Traceback (most recent call last):
+  File "src/train_graph_gen_contrastive.py", line 472, in <module>
+    main(args)
+  File "src/train_graph_gen_contrastive.py", line 438, in main
+    trainer: pl.Trainer = generic_train(
+  File "/cluster/raid/home/zhivar.sourati/ExplagraphGen/src/lightning_base.py", line 385, in generic_train
+    trainer.fit(model)
+  File "/cluster/raid/home/zhivar.sourati/anaconda3/envs/explagraphgen/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1003, in fit
+    results = self.single_gpu_train(model)
+  File "/cluster/raid/home/zhivar.sourati/anaconda3/envs/explagraphgen/lib/python3.8/site-packages/pytorch_lightning/trainer/distrib_parts.py", line 186, in single_gpu_train
+    results = self.run_pretrain_routine(model)
+  File "/cluster/raid/home/zhivar.sourati/anaconda3/envs/explagraphgen/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1213, in run_pretrain_routine
+    self.train()
+  File "/cluster/raid/home/zhivar.sourati/anaconda3/envs/explagraphgen/lib/python3.8/site-packages/pytorch_lightning/trainer/training_loop.py", line 370, in train
+    self.run_training_epoch()
+  File "/cluster/raid/home/zhivar.sourati/anaconda3/envs/explagraphgen/lib/python3.8/site-packages/pytorch_lightning/trainer/training_loop.py", line 452, in run_training_epoch
+    batch_output = self.run_training_batch(batch, batch_idx)
+  File "/cluster/raid/home/zhivar.sourati/anaconda3/envs/explagraphgen/lib/python3.8/site-packages/pytorch_lightning/trainer/training_loop.py", line 627, in run_training_batch
+    opt_closure_result = self.optimizer_closure(
+  File "/cluster/raid/home/zhivar.sourati/anaconda3/envs/explagraphgen/lib/python3.8/site-packages/pytorch_lightning/trainer/training_loop.py", line 775, in optimizer_closure
+    training_step_output = self.training_forward(split_batch, batch_idx, opt_idx,
+  File "/cluster/raid/home/zhivar.sourati/anaconda3/envs/explagraphgen/lib/python3.8/site-packages/pytorch_lightning/trainer/training_loop.py", line 946, in training_forward
+    output = self.model.training_step(*args)
+  File "src/train_graph_gen_contrastive.py", line 199, in training_step
+    loss_tensors = self._step(batch)
+  File "src/train_graph_gen_contrastive.py", line 144, in _step
+    pos_tgt_ids, all_neg_tgt_ids = batch["pos_labels"], batch["all_neg_labels"]
+KeyError: 'all_neg_labels'

@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "src/train_stance_pred.py", line 229, in <module>
+    main()
+  File "src/train_stance_pred.py", line 71, in main
+    raise ValueError(
+ValueError: Output directory (./models/roberta-large-stance) already exists and is not empty. Use --overwrite_output_dir to overcome.
