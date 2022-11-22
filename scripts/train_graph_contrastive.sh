@@ -11,6 +11,7 @@ python src/train_graph_gen_contrastive.py \
 --output_dir=models/contrastive \
 --overwrite_output_dir \
 --num_train_epochs=15  \
+--logger_name wandb \
 --cache_dir cache \
 --gpus=1 \
 --do_train \

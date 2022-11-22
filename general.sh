@@ -19,11 +19,11 @@ eval "$(conda shell.bash hook)"
 # Activate (local) env
 conda activate explagraphgen
 
-bash scripts/train_stance.sh
+# bash scripts/train_stance.sh
 
 # bash scripts/train_graph_max_margin.sh
 
-# bash scripts/train_graph_contrastive.sh
+bash scripts/train_graph_contrastive.sh
 
 # bash scripts/eval_graph_max_margin.sh
 

@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "src/train_graph_gen_contrastive.py", line 472, in <module>
+    main(args)
+  File "src/train_graph_gen_contrastive.py", line 425, in main
+    logger = WandbLogger(name=model.output_dir.name, project=project)
+  File "/cluster/raid/home/zhivar.sourati/anaconda3/envs/explagraphgen/lib/python3.8/site-packages/pytorch_lightning/loggers/wandb.py", line 73, in __init__
+    raise ImportError('You want to use `wandb` logger which is not installed yet,'  # pragma: no-cover
+ImportError: You want to use `wandb` logger which is not installed yet, install it with `pip install wandb`.
