@@ -1,0 +1,29 @@
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+CUDA_VISIBLE_DEVICES: [0]
+Traceback (most recent call last):
+  File "src/train_graph_gen_pos_perturbed.py", line 458, in <module>
+    main(args)
+  File "src/train_graph_gen_pos_perturbed.py", line 425, in main
+    trainer: pl.Trainer = generic_train(
+  File "/cluster/raid/home/zhivar.sourati/ExplagraphGen/src/lightning_base.py", line 385, in generic_train
+    trainer.fit(model)
+  File "/cluster/raid/home/zhivar.sourati/anaconda3/envs/explagraphgen/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1003, in fit
+    results = self.single_gpu_train(model)
+  File "/cluster/raid/home/zhivar.sourati/anaconda3/envs/explagraphgen/lib/python3.8/site-packages/pytorch_lightning/trainer/distrib_parts.py", line 171, in single_gpu_train
+    model.setup('fit')
+  File "/cluster/raid/home/zhivar.sourati/ExplagraphGen/src/lightning_base.py", line 172, in setup
+    self.train_loader = self.get_dataloader("train", self.hparams.train_batch_size, shuffle=True)
+  File "src/train_graph_gen_pos_perturbed.py", line 268, in get_dataloader
+    dataset = self.get_dataset(type_path)
+  File "src/train_graph_gen_pos_perturbed.py", line 258, in get_dataset
+    dataset = self.dataset_class(
+  File "/cluster/raid/home/zhivar.sourati/ExplagraphGen/src/utils_pos_perturbed.py", line 128, in __init__
+    self.src_lens = self.get_char_lens(self.src_file)
+  File "/cluster/raid/home/zhivar.sourati/ExplagraphGen/src/utils_pos_perturbed.py", line 147, in get_char_lens
+    return [len(x) for x in Path(data_file).open().readlines()]
+  File "/cluster/raid/home/zhivar.sourati/anaconda3/envs/explagraphgen/lib/python3.8/pathlib.py", line 1218, in open
+    return io.open(self, mode, buffering, encoding, errors, newline,
+  File "/cluster/raid/home/zhivar.sourati/anaconda3/envs/explagraphgen/lib/python3.8/pathlib.py", line 1074, in _opener
+    return self._accessor.open(self, flags, mode)
+FileNotFoundError: [Errno 2] No such file or directory: 'contrastive_data/trainpos_aug.source'

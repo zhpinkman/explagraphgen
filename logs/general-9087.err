@@ -1,0 +1,51 @@
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+CUDA_VISIBLE_DEVICES: [0]
+wandb: Currently logged in as: zhpinkman. Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.13.5 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.13.4
+wandb: Run data is saved locally in /cluster/raid/home/zhivar.sourati/ExplagraphGen/wandb/run-20221122_214118-25lncwsx
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run pos_aug
+wandb: ⭐️ View project at https://wandb.ai/zhpinkman/contrastive_data
+wandb: 🚀 View run at https://wandb.ai/zhpinkman/contrastive_data/runs/25lncwsx
+Set SLURM handle signals.
+wandb: Waiting for W&B process to finish... (failed 1). Press Control-C to abort syncing.
+wandb: Synced pos_aug: https://wandb.ai/zhpinkman/contrastive_data/runs/25lncwsx
+wandb: Synced 6 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20221122_214118-25lncwsx/logs
+Traceback (most recent call last):
+  File "src/train_graph_gen_pos_perturbed.py", line 458, in <module>
+    main(args)
+  File "src/train_graph_gen_pos_perturbed.py", line 425, in main
+    trainer: pl.Trainer = generic_train(
+  File "/cluster/raid/home/zhivar.sourati/ExplagraphGen/src/lightning_base.py", line 385, in generic_train
+    trainer.fit(model)
+  File "/cluster/raid/home/zhivar.sourati/anaconda3/envs/explagraphgen/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1003, in fit
+    results = self.single_gpu_train(model)
+  File "/cluster/raid/home/zhivar.sourati/anaconda3/envs/explagraphgen/lib/python3.8/site-packages/pytorch_lightning/trainer/distrib_parts.py", line 186, in single_gpu_train
+    results = self.run_pretrain_routine(model)
+  File "/cluster/raid/home/zhivar.sourati/anaconda3/envs/explagraphgen/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1185, in run_pretrain_routine
+    self.reset_val_dataloader(ref_model)
+  File "/cluster/raid/home/zhivar.sourati/anaconda3/envs/explagraphgen/lib/python3.8/site-packages/pytorch_lightning/trainer/data_loading.py", line 343, in reset_val_dataloader
+    self.num_val_batches, self.val_dataloaders = self._reset_eval_dataloader(model, 'val')
+  File "/cluster/raid/home/zhivar.sourati/anaconda3/envs/explagraphgen/lib/python3.8/site-packages/pytorch_lightning/trainer/data_loading.py", line 270, in _reset_eval_dataloader
+    dataloaders = self.request_dataloader(getattr(model, f'{mode}_dataloader'))
+  File "/cluster/raid/home/zhivar.sourati/anaconda3/envs/explagraphgen/lib/python3.8/site-packages/pytorch_lightning/trainer/data_loading.py", line 364, in request_dataloader
+    dataloader = dataloader_fx()
+  File "src/train_graph_gen_pos_perturbed.py", line 308, in val_dataloader
+    return self.get_dataloader("val", batch_size=self.hparams.eval_batch_size)
+  File "src/train_graph_gen_pos_perturbed.py", line 268, in get_dataloader
+    dataset = self.get_dataset(type_path)
+  File "src/train_graph_gen_pos_perturbed.py", line 258, in get_dataset
+    dataset = self.dataset_class(
+  File "/cluster/raid/home/zhivar.sourati/ExplagraphGen/src/utils_pos_perturbed.py", line 128, in __init__
+    self.src_lens = self.get_char_lens(self.src_file)
+  File "/cluster/raid/home/zhivar.sourati/ExplagraphGen/src/utils_pos_perturbed.py", line 147, in get_char_lens
+    return [len(x) for x in Path(data_file).open().readlines()]
+  File "/cluster/raid/home/zhivar.sourati/anaconda3/envs/explagraphgen/lib/python3.8/pathlib.py", line 1218, in open
+    return io.open(self, mode, buffering, encoding, errors, newline,
+  File "/cluster/raid/home/zhivar.sourati/anaconda3/envs/explagraphgen/lib/python3.8/pathlib.py", line 1074, in _opener
+    return self._accessor.open(self, flags, mode)
+FileNotFoundError: [Errno 2] No such file or directory: 'contrastive_data/val.pos_aug.source'

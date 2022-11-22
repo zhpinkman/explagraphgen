@@ -1,0 +1,76 @@
+{
+    "val": [
+        {
+            "val_avg_loss": 4.460590362548828,
+            "val_avg_rouge1": 27.9502,
+            "val_avg_rouge2": 8.565750000000001,
+            "val_avg_rougeL": 20.7003,
+            "val_avg_rougeLsum": 23.1754,
+            "val_avg_gen_time": 0.6472928822040558,
+            "val_avg_gen_len": 115.0,
+            "step_count": 1
+        },
+        {
+            "val_avg_loss": 0.8715890049934387,
+            "val_avg_rouge1": 50.21959400000001,
+            "val_avg_rouge2": 26.577144000000004,
+            "val_avg_rougeL": 39.530934,
+            "val_avg_rougeLsum": 39.593322,
+            "val_avg_gen_time": 0.1932803761959076,
+            "val_avg_gen_len": 50.64,
+            "step_count": 2
+        },
+        {
+            "val_avg_loss": 0.8355300426483154,
+            "val_avg_rouge1": 50.951316,
+            "val_avg_rouge2": 27.376568000000002,
+            "val_avg_rougeL": 40.756181999999995,
+            "val_avg_rougeLsum": 40.74263,
+            "val_avg_gen_time": 0.1789627816279729,
+            "val_avg_gen_len": 46.96,
+            "step_count": 3
+        },
+        {
+            "val_avg_loss": 0.8197954893112183,
+            "val_avg_rouge1": 51.781336,
+            "val_avg_rouge2": 27.882854,
+            "val_avg_rougeL": 41.246336,
+            "val_avg_rougeLsum": 41.261604,
+            "val_avg_gen_time": 0.18281723360220592,
+            "val_avg_gen_len": 47.94,
+            "step_count": 4
+        },
+        {
+            "val_avg_loss": 0.8203902840614319,
+            "val_avg_rouge1": 51.539532,
+            "val_avg_rouge2": 27.705737999999997,
+            "val_avg_rougeL": 40.97044400000001,
+            "val_avg_rougeLsum": 40.97932599999999,
+            "val_avg_gen_time": 0.1824670668443044,
+            "val_avg_gen_len": 48.28,
+            "step_count": 5
+        },
+        {
+            "val_avg_loss": 0.8211330771446228,
+            "val_avg_rouge1": 51.51299800000001,
+            "val_avg_rouge2": 27.557616,
+            "val_avg_rougeL": 41.29293,
+            "val_avg_rougeLsum": 41.29951200000001,
+            "val_avg_gen_time": 0.18081874171892803,
+            "val_avg_gen_len": 46.86,
+            "step_count": 6
+        }
+    ],
+    "test": [
+        {
+            "test_avg_loss": 0.8197954893112183,
+            "test_avg_rouge1": 51.782688,
+            "test_avg_rouge2": 27.902067999999996,
+            "test_avg_rougeL": 41.174822000000006,
+            "test_avg_rougeLsum": 41.208118000000006,
+            "test_avg_gen_time": 0.18273301243782045,
+            "test_avg_gen_len": 47.94,
+            "step_count": 7
+        }
+    ]
+}
