@@ -9,7 +9,7 @@ python src/train_graph_gen_max_margin.py \
 --val_max_target_length=150 \
 --test_max_target_length=150 \
 --output_dir=models/max-margin \
---num_train_epochs=15  \
+--num_train_epochs=5  \
 --cache_dir cache \
 --gpus=1 \
 --do_predict \

@@ -9,8 +9,10 @@ python src/train_graph_gen.py \
 --val_max_target_length=150 \
 --test_max_target_length=150 \
 --output_dir=models/simple \
---num_train_epochs=15  \
+--overwrite_output_dir \
+--num_train_epochs=5  \
 --cache_dir cache \
+--logger_name wandb \
 --gpus=1 \
 --do_train \
 --do_predict \
