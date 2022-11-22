@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=general
-#SBATCH --output=%x-%j.out
-#SBATCH --error=%x-%j.err
+#SBATCH --output=logs/%x-%j.out
+#SBATCH --error=logs/%x-%j.err
 #SBATCH --time=3-00:00:00
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=30480
