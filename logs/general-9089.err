@@ -1,0 +1,87 @@
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+CUDA_VISIBLE_DEVICES: [0]
+wandb: Currently logged in as: zhpinkman. Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.13.5 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.13.4
+wandb: Run data is saved locally in /cluster/raid/home/zhivar.sourati/ExplagraphGen/wandb/run-20221123_011256-1josx04v
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run contrastive
+wandb: ⭐️ View project at https://wandb.ai/zhpinkman/contrastive_data
+wandb: 🚀 View run at https://wandb.ai/zhpinkman/contrastive_data/runs/1josx04v
+Set SLURM handle signals.
+/cluster/raid/home/zhivar.sourati/anaconda3/envs/explagraphgen/lib/python3.8/site-packages/transformers/generation_utils.py:760: UserWarning: __floordiv__ is deprecated, and its behavior will change in a future version of pytorch. It currently rounds toward 0 (like the 'trunc' function NOT 'floor'). This results in incorrect rounding for negative values. To keep the current behavior, use torch.div(a, b, rounding_mode='trunc'), or for actual floor division, use torch.div(a, b, rounding_mode='floor').
+  beam_id = beam_token_id // vocab_size
+Set SLURM handle signals.
+wandb: Waiting for W&B process to finish... (success).
+wandb: - 0.001 MB of 0.001 MB uploaded (0.000 MB deduped)wandb: \ 0.001 MB of 0.014 MB uploaded (0.000 MB deduped)wandb: | 0.079 MB of 0.079 MB uploaded (0.000 MB deduped)wandb: / 0.079 MB of 0.079 MB uploaded (0.000 MB deduped)wandb: 
+wandb: Run history:
+wandb:                 bs ███████████████████████████████████████▁
+wandb:              epoch ▁▁▁▁▁▁▁▁▃▃▃▃▃▃▃▃▅▅▅▅▅▅▅▅▆▆▆▆▆▆▆▆████████
+wandb:        global_step ▁▁▁▂▂▂▂▂▂▃▃▃▃▃▄▄▄▄▄▄▅▅▅▅▅▅▆▆▆▆▆▇▇▇▇▇▇███
+wandb:            grad_mp ▁
+wandb:               loss █▅▄▃▄▃▃▃▃▂▂▂▂▂▂▂▂▃▂▂▃▂▂▂▂▂▂▁▂▂▂▂▂▂▂▂▂▂▂▁
+wandb:         lr_group_0 ███▇▇▇▇▇▇▆▆▆▆▆▆▅▅▅▅▅▄▄▄▄▄▄▃▃▃▃▃▂▂▂▂▂▂▁▁▁
+wandb:         lr_group_1 ███▇▇▇▇▇▇▆▆▆▆▆▆▅▅▅▅▅▄▄▄▄▄▄▃▃▃▃▃▂▂▂▂▂▂▁▁▁
+wandb:                 mp ▁
+wandb:           n_params ▁
+wandb:       src_pad_frac ▅▄▅▄▅▄▄▄▅▆▄▇▄▄▃▅▃▄▄▄▆▇▆▇▄▇▆▅▆▆▅▆▇▄▅▅▂█▅▁
+wandb:        src_pad_tok ▄▃▄▃▃▃▃▃▄▅▃▆▃▃▃▄▃▃▃▄▅▆▆▆▄▆▅▄▄▄▄▅▇▃▄▄▂█▅▁
+wandb:         step_count ▁▂▄▅▇██
+wandb:   test_avg_gen_len ▁▁
+wandb:  test_avg_gen_time ▁▁
+wandb:      test_avg_loss ▁▁
+wandb:    test_avg_rouge1 ▁▁
+wandb:    test_avg_rouge2 ▁▁
+wandb:    test_avg_rougeL ▁▁
+wandb: test_avg_rougeLsum ▁▁
+wandb:          test_loss ▁
+wandb:        test_rouge2 ▁
+wandb:                tpb ▇▇▇▇▇▇▇▇▇▇▇▆▇▇▇▇▇█▇▇▇▇▇▇▇█▆▇▆▆▆▆▆▇▇▇▇▇▇▁
+wandb:    val_avg_gen_len ▁█▄▅▅▅
+wandb:   val_avg_gen_time ▁█▃▄▆▆
+wandb:       val_avg_loss ▁▂▅▇██
+wandb:     val_avg_rouge1 ▁▄█▃▅▅
+wandb:     val_avg_rouge2 ▁▄█▅▂▂
+wandb:     val_avg_rougeL ▁▄▇█▆▆
+wandb:  val_avg_rougeLsum ▁▄▇█▆▆
+wandb:           val_loss ▁
+wandb:         val_rouge2 ▁
+wandb: 
+wandb: Run summary:
+wandb:                 bs 2
+wandb:              epoch 4
+wandb:        global_step 1404
+wandb:            grad_mp 737.66861
+wandb:               loss 0.19913
+wandb:         lr_group_0 0.0
+wandb:         lr_group_1 0.0
+wandb:                 mp 737.66861
+wandb:           n_params 737668608
+wandb:       src_pad_frac 0.0102
+wandb:        src_pad_tok 1
+wandb:         step_count 7
+wandb:   test_avg_gen_len 47.88
+wandb:  test_avg_gen_time 0.18485
+wandb:      test_avg_loss 0.54117
+wandb:    test_avg_rouge1 51.27817
+wandb:    test_avg_rouge2 27.98168
+wandb:    test_avg_rougeL 41.13992
+wandb: test_avg_rougeLsum 41.16379
+wandb:          test_loss 0.54117
+wandb:        test_rouge2 27.98168
+wandb:                tpb 171
+wandb:    val_avg_gen_len 50.36
+wandb:   val_avg_gen_time 0.20209
+wandb:       val_avg_loss 0.61699
+wandb:     val_avg_rouge1 51.09466
+wandb:     val_avg_rouge2 26.89994
+wandb:     val_avg_rougeL 40.77801
+wandb:  val_avg_rougeLsum 40.79546
+wandb:           val_loss 0.61699
+wandb:         val_rouge2 26.89994
+wandb: 
+wandb: Synced contrastive: https://wandb.ai/zhpinkman/contrastive_data/runs/1josx04v
+wandb: Synced 6 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20221123_011256-1josx04v/logs
