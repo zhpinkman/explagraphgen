@@ -1,6 +1,6 @@
 python src/train_graph_gen_max_margin.py \
 --data_dir=contrastive_data \
---model_name_or_path=t5-large \
+--model_name_or_path="s10_33%" \
 --learning_rate=3e-5 \
 --train_batch_size=8 \
 --eval_batch_size=8 \
