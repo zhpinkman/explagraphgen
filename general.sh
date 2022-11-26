@@ -21,11 +21,11 @@ conda activate explagraphgen
 
 # bash scripts/train_graph_gen.sh
 
-bash scripts/train_graph_max_margin.sh
+# bash scripts/train_graph_max_margin.sh
 
 bash scripts/train_graph_contrastive.sh
 
-bash scripts/train_graph_gen_pos_perturbed.sh
+# bash scripts/train_graph_gen_pos_perturbed.sh
 
 
 conda deactivate
