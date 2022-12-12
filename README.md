@@ -1,10 +1,24 @@
 # ExplagraphGen
 
-PyTorch code for the reproduction of the ACL 2022 paper done by Zhivar Sourati and Omey Manyar which is basically a fork from the [main repository](https://github.com/swarnaHub/ExplagraphGen):
+PyTorch code for the reproduction of the following ACL 2022 paper done by Zhivar Sourati and Omey Manyar which is basically a fork from the [main repository](https://github.com/swarnaHub/ExplagraphGen):
 
 [Explanation Graph Generation via Pre-trained Language Models: An Empirical Study with Contrastive Learning](https://arxiv.org/abs/2204.04813)
 
 [Swarnadeep Saha](https://swarnahub.github.io/), [Prateek Yadav](https://prateek-yadav.github.io/), and [Mohit Bansal](https://www.cs.unc.edu/~mbansal/)
+
+
+the list of content can be found below:
+
+- [Installation](#installation)
+- [ExplaGraphs Dataset](#explagraphs-dataset)
+- [Contrastive Graph Data](#contrastive-graph-data)
+- [Models](#models)
+- [Running the scripts on an GPU Cluster](#running-the-scripts-on-an-gpu-cluster)
+- [Predictions](#predictions)
+- [Evaluation Metrics](#evaluation-metrics)
+- [Citation](#citation)
+- [Related Citation](#related-citation)
+
 
 ## Installation
 This repository is tested on Python 3.8.3.  
@@ -53,6 +67,7 @@ bash scripts/train_graph_gen.sh
 bash scripts/train_graph_gen_pos_perturbed.sh
 ```
 
+Note that as the last experiment we did replacing the base T5 with a T5 that was fine-tuned on commonsense knowledge graphs uses the model from [here](https://arxiv.org/abs/2205.10661), in order to do the last experiment we advice you to reach out to the author and get the model and then just change the value for the field `model_name_or_path` in the training scripts mentioned above with the path to the model.
 
 
 All trained models will be saved in the ```models``` folder. The scripts to evaluate your models can also be found in the ```scripts``` folder.
