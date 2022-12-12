@@ -1,6 +1,6 @@
 # ExplagraphGen
 
-PyTorch code for our ACL 2022 paper:
+PyTorch code for the reproduction of the ACL 2022 paper done by Zhivar Sourati and Omey Manyar which is basically a fork from the [main repository](https://github.com/swarnaHub/ExplagraphGen):
 
 [Explanation Graph Generation via Pre-trained Language Models: An Empirical Study with Contrastive Learning](https://arxiv.org/abs/2204.04813)
 
@@ -45,9 +45,23 @@ bash scripts/train_graph_max_margin.sh
 bash scripts/train_graph_contrastive.sh
 ```
 
+Also for training of the other models, including the model that uses the positive graphs aside the original data to train the base model and also training of the base model, you can use the following scripts: 
+
+```
+bash scripts/train_graph_gen.sh
+
+bash scripts/train_graph_gen_pos_perturbed.sh
+```
+
+
+
 All trained models will be saved in the ```models``` folder. The scripts to evaluate your models can also be found in the ```scripts``` folder.
 
 We'll share our trained models soon. Stay tuned!
+
+## Running the scripts on an GPU Cluster
+
+If you want to run the scripts on a GPU cluster, you can use `general.sh` that is basically a wrapper for executing the scripts on a GPU cluster that has SLURM as a job scheduler. After adjusting the parameters in `general.sh` such as number and type of GPU and also the amount of RAM that you need, you can submit your job with `sbatch general.sh`
 
 ## Predictions
 You can find the predicted stances and the generated graphs from our max-margin model in ```output/preds.tsv```.
